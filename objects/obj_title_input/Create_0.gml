@@ -34,5 +34,5 @@ typed_count = 0;
 
 // Visual settings
 highlight_padding = 20;
-font_normal = fnt_popup;
+font_normal = fnt_title_bold;
 font_bold = fnt_title_bold;

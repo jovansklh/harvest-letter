@@ -1,3 +1,7 @@
+var _field = instance_place(obj_budi.x, obj_budi.y, obj_growth)
+if (_field.is_watered) {
+	_field.completed = true;
+}
 if(string_trim(obj_budi.typedWord) == tugas_list[index_sekarang]){
 	index_sekarang += 1;
 	
@@ -56,4 +60,4 @@ if(string_trim(obj_budi.typedWord) == tugas_list[index_sekarang]){
         }
     }
 }
-} 
+}

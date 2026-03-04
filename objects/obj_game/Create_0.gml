@@ -88,8 +88,7 @@ global.tasks = [
 ]
 
 global.tutor_tasks = [
-	"Plant the seeds",
-	"Water the plants"
+	"Plant & water the seed"
 ];
 
 global.tutorial_index = 0; // current tutorial step

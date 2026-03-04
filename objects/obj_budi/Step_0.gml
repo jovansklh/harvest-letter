@@ -1,4 +1,4 @@
-depth = -y;
+ depth = -y;
 if (!variable_instance_exists(id, "face")) {
     face = 0; 
 }
