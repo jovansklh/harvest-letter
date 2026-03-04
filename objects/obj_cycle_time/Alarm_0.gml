@@ -1,167 +1,102 @@
-/// @DnDAction : YoYo Games.Common.Variable
-/// @DnDVersion : 1
-/// @DnDHash : 341000A0
-/// @DnDArgument : "expr" "10"
-/// @DnDArgument : "expr_relative" "1"
-/// @DnDArgument : "var" "global.menit_sekarang"
 global.menit_sekarang += 10;
 
-/// @DnDAction : YoYo Games.Common.If_Expression
-/// @DnDVersion : 1
-/// @DnDHash : 25CC650D
-/// @DnDArgument : "expr" "global.menit_sekarang >= 60"
-if(global.menit_sekarang >= 60){	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 7E5A3BC0
-	/// @DnDParent : 25CC650D
-	/// @DnDArgument : "expr" "global.menit_sekarang  - 60"
-	/// @DnDArgument : "var" "global.menit_sekarang"
+if(global.menit_sekarang >= 60)
+{
 	global.menit_sekarang = global.menit_sekarang  - 60;
 
-	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 0E9873C3
-	/// @DnDParent : 25CC650D
-	/// @DnDArgument : "expr" "1"
-	/// @DnDArgument : "expr_relative" "1"
-	/// @DnDArgument : "var" "global.jam_sekarang"
-	global.jam_sekarang += 1;}
+	global.jam_sekarang += 1;
+}
 
-/// @DnDAction : YoYo Games.Common.If_Expression
-/// @DnDVersion : 1
-/// @DnDHash : 66114330
-/// @DnDArgument : "expr" "global.jam_sekarang >= 24"
-if(global.jam_sekarang >= 24){	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 4565BA8B
-	/// @DnDParent : 66114330
-	/// @DnDArgument : "var" "global.jam_sekarang"
+if(global.jam_sekarang >= 24)
+{
 	global.jam_sekarang = 0;
 
-	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 4070B9D7
-	/// @DnDParent : 66114330
-	/// @DnDArgument : "expr" "+1"
-	/// @DnDArgument : "expr_relative" "1"
-	/// @DnDArgument : "var" "global.hari"
 	global.hari += +1;
 
-	/// @DnDAction : YoYo Games.Instances.Call_User_Event
-	/// @DnDVersion : 1
-	/// @DnDHash : 3DD0BDFA
-	/// @DnDApplyTo : {obj_time_arrow2}
-	/// @DnDParent : 66114330
 	with(obj_time_arrow2) {
 	event_user(0);
-	}}
+	}
+}
 
-/// @DnDAction : YoYo Games.Common.Variable
-/// @DnDVersion : 1
-/// @DnDHash : 2BA1933E
-/// @DnDArgument : "expr" ""AM""
-/// @DnDArgument : "var" "_sufiks"
 _sufiks = "AM";
 
-/// @DnDAction : YoYo Games.Common.If_Expression
-/// @DnDVersion : 1
-/// @DnDHash : 1C6E0AD4
-/// @DnDArgument : "expr" "global.jam_sekarang >= 12"
-if(global.jam_sekarang >= 12){	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 230559E4
-	/// @DnDParent : 1C6E0AD4
-	/// @DnDArgument : "expr" ""PM""
-	/// @DnDArgument : "var" "_sufiks"
-	_sufiks = "PM";}
+if(global.jam_sekarang >= 12)
+{
+	_sufiks = "PM";
+}
 
-/// @DnDAction : YoYo Games.Common.Variable
-/// @DnDVersion : 1
-/// @DnDHash : 199924A3
-/// @DnDArgument : "expr" "global.jam_sekarang mod 12"
-/// @DnDArgument : "var" "_jam_12"
 _jam_12 = global.jam_sekarang mod 12;
 
-/// @DnDAction : YoYo Games.Common.If_Expression
-/// @DnDVersion : 1
-/// @DnDHash : 72C6A91F
-/// @DnDArgument : "expr" "(global.jam_sekarang == 14 || global.jam_sekarang == 16) && (global.menit_sekarang == 0)"
-if((global.jam_sekarang == 14 || global.jam_sekarang == 16) && (global.menit_sekarang == 0)){	/// @DnDAction : YoYo Games.Instances.Create_Instance
-	/// @DnDVersion : 1
-	/// @DnDHash : 27403E19
-	/// @DnDParent : 72C6A91F
-	/// @DnDArgument : "xpos" "room_width /  2"
-	/// @DnDArgument : "ypos" "room_height / 2"
-	/// @DnDArgument : "objectid" "obj_popup_qte"
-	/// @DnDArgument : "layer" ""QTE""
-	/// @DnDSaveInfo : "objectid" "obj_popup_qte"
-	instance_create_layer(room_width /  2, room_height / 2, "QTE", obj_popup_qte);
+// 1. Tentukan Jadwal (Dilakukan segera saat hari baru dimulai / jam 0)
+if (global.jam_sekarang >= 14 && global.jam_sekarang <= 16 && global.waktu_qte_hari_ini == -1) 
+{
+    var daftar_pilihan = [
+        (14*60)+0,  (14*60)+10, (14*60)+20, (14*60)+30, (14*60)+40, (14*60)+50,
+        (15*60)+0,  (15*60)+10, (15*60)+20, (15*60)+30, (15*60)+40, (15*60)+50,
+        (16*60)+0
+    ];
+    
+    var index_acak = irandom(array_length(daftar_pilihan) - 1);
+    
+    // Menyimpan jadwal acak ke variabel global
+    global.waktu_qte_hari_ini = daftar_pilihan[index_acak];
+}
 
-	/// @DnDAction : YoYo Games.Instances.Set_Alarm
-	/// @DnDVersion : 1
-	/// @DnDHash : 2AB49A6F
-	/// @DnDParent : 72C6A91F
-	/// @DnDArgument : "steps" "-1"
-	alarm_set(0, -1);}
+// 2. Cek Eksekusi QTE
+if (global.waktu_qte_hari_ini != -1 && !global.sudah_muncul_hari_ini)
+{
+    var waktu_sekarang = (global.jam_sekarang * 60) + global.menit_sekarang;
 
-/// @DnDAction : YoYo Games.Common.If_Expression
-/// @DnDVersion : 1
-/// @DnDHash : 74AE1E63
-/// @DnDArgument : "expr" "(global.jam_sekarang == 5 ) && (global.menit_sekarang == 0)"
-<<<<<<< HEAD
-if((global.jam_sekarang == 5 ) && (global.menit_sekarang == 0)){	/// @DnDAction : YoYo Games.Common.Variable
+    // Pakai >= agar jika waktu melompat per 10 menit, QTE tetap terdeteksi
+    if (waktu_sekarang >= global.waktu_qte_hari_ini)
+    {
+        // Pastikan tidak muncul lewat dari jam 16:00 (batas akhir)
+        if (waktu_sekarang <= (16*60)) 
+        {
+            if (!instance_exists(obj_popup_qte)) 
+            {
+                instance_create_layer(room_width / 2, room_height / 2, "QTE", obj_popup_qte);
+            }
+            // Kunci agar tidak muncul lagi di hari yang sama
+            global.sudah_muncul_hari_ini = true; 
+        }
+    }
+}
+
+// 3. Reset Harian (Dilakukan di akhir hari)
+if (global.jam_sekarang == 23 && global.menit_sekarang == 50)
+{
+    global.waktu_qte_hari_ini = -1;
+    global.sudah_muncul_hari_ini = false;
+}
+
+if((global.jam_sekarang == 5 ) && (global.menit_sekarang == 0))
+{
+	var layer_id = layer_get_id("Fields");
+
+	var fields = layer_get_all_elements(layer_id);
+
+	for(i = 0; i < array_length(fields); i += 1) {
+	var field = layer_instance_get_instance(fields[i]);
+	
+		if(field.is_watered == true)
+{
+	field.image_index += +1;
+}
+}
+}
+
+if((global.jam_sekarang == 5 ) && (global.menit_sekarang == 0))
+{
+	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 416F5716
 	/// @DnDParent : 74AE1E63
 	/// @DnDArgument : "expr" "+1"
 	/// @DnDArgument : "expr_relative" "1"
 	/// @DnDArgument : "var" "obj_growth.image_index"
-	obj_growth.image_index += +1;}
-=======
-if((global.jam_sekarang == 5 ) && (global.menit_sekarang == 0)){	/// @DnDAction : YoYo Games.Common.Temp_Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 4F797120
-	/// @DnDParent : 74AE1E63
-	/// @DnDArgument : "var" "layer_id"
-	/// @DnDArgument : "value" "layer_get_id("Fields")"
-	var layer_id = layer_get_id("Fields");
-
-	/// @DnDAction : YoYo Games.Common.Temp_Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 1A029D04
-	/// @DnDParent : 74AE1E63
-	/// @DnDArgument : "var" "fields"
-	/// @DnDArgument : "value" "layer_get_all_elements(layer_id)"
-	var fields = layer_get_all_elements(layer_id);
-
-	/// @DnDAction : YoYo Games.Loops.For_Loop
-	/// @DnDVersion : 1
-	/// @DnDHash : 7A8CDBAE
-	/// @DnDParent : 74AE1E63
-	/// @DnDArgument : "cond" "i < array_length(fields)"
-	for(i = 0; i < array_length(fields); i += 1) {	/// @DnDAction : YoYo Games.Common.Temp_Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 5A730282
-		/// @DnDParent : 7A8CDBAE
-		/// @DnDArgument : "var" "field"
-		/// @DnDArgument : "value" "layer_instance_get_instance(fields[i])"
-		var field = layer_instance_get_instance(fields[i]);
-	
-		/// @DnDAction : YoYo Games.Common.If_Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 17A586B6
-		/// @DnDParent : 7A8CDBAE
-		/// @DnDArgument : "var" "field.is_watered"
-		/// @DnDArgument : "value" "true"
-		if(field.is_watered == true){	/// @DnDAction : YoYo Games.Common.Variable
-			/// @DnDVersion : 1
-			/// @DnDHash : 67BC425F
-			/// @DnDParent : 17A586B6
-			/// @DnDArgument : "expr" "+1"
-			/// @DnDArgument : "expr_relative" "1"
-			/// @DnDArgument : "var" "field.image_index"
-			field.image_index += +1;}}}
->>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
+	obj_growth.image_index += +1;
+}
 
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
@@ -187,22 +122,13 @@ global.waktu_display = string_format(_jam_12_val, 2, 0) + ":" + (_menit_val == 0
 // 3. Tetapkan variabel hari
 global.hari_display = "Hari " + string(global.hari);
 
-/// @DnDAction : YoYo Games.Instances.If_Instance_Exists
-/// @DnDVersion : 1
-/// @DnDHash : 79D4C6BF
-/// @DnDArgument : "obj" "obj_popup_qte"
-/// @DnDArgument : "not" "1"
-/// @DnDSaveInfo : "obj" "obj_popup_qte"
-var l79D4C6BF_0 = false;l79D4C6BF_0 = instance_exists(obj_popup_qte);if(!l79D4C6BF_0){	/// @DnDAction : YoYo Games.Instances.Set_Alarm
-	/// @DnDVersion : 1
-	/// @DnDHash : 6DCF2982
-	/// @DnDParent : 79D4C6BF
-<<<<<<< HEAD
+var l79D4C6BF_0 = false;
+l79D4C6BF_0 = instance_exists(obj_popup_qte);
+if(!l79D4C6BF_0)
+{
+	alarm_set(0, (room_speed * 1.4) + alarm_get(0));
+}
 	/// @DnDArgument : "steps" "room_speed * 0.2"
 	/// @DnDArgument : "steps_relative" "1"
-	alarm_set(0, room_speed * 0.2 + alarm_get(0));}
-=======
-	/// @DnDArgument : "steps" "(room_speed * 1.4)"
-	/// @DnDArgument : "steps_relative" "1"
-	alarm_set(0, (room_speed * 1.4) + alarm_get(0));}
->>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
+	alarm_set(0, room_speed * 0.2 + alarm_get(0));
+}
