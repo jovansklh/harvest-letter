@@ -1,17 +1,28 @@
+<<<<<<< HEAD
 var l02409F43_0 = false;
 l02409F43_0 = instance_exists(obj_popup);
 if(l02409F43_0)
 {
 	if(string_trim(obj_budi.typedWord) == obj_popup.tugas_list[obj_popup.index_sekarang])
 {
+=======
+var popup_exists = false;
+popup_exists = instance_exists(obj_popup);
+if(popup_exists){
+	if(string_trim(obj_budi.typedWord) == obj_popup.tugas_list[obj_popup.index_sekarang]){
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
 	obj_popup.index_sekarang += 1;
 	
 		show_debug_message(string("debug message"));
 	
 		obj_budi.typedWord = "";
 	
+<<<<<<< HEAD
 		if(obj_popup.index_sekarang >= array_length(obj_popup.tugas_list))
 {
+=======
+		if(obj_popup.index_sekarang >= array_length(obj_popup.tugas_list)){
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
 			global.popup_open = false;
 			
 			obj_budi.spd = 1
@@ -24,9 +35,40 @@ if(l02409F43_0)
 			
 			global.carrotseed -= 1;
 			
+<<<<<<< HEAD
 			show_popup_grow = true;
 			
 			alarm[0] = room_speed * 5;
+=======
+			show_popup_grow = true; 
+			
+			alarm[0] = room_speed * 5;
+			}
+	if (obj_budi.typedWord == "water plants") {
+    if (global.tutorial_index == 1) {
+
+        var has_water = false;
+
+        with (obj_inventory) {
+            has_water = inventory_has(obj_water_bucket);
+        }
+
+        if (has_water) {
+            // Complete task
+            global.tutorialtasks[1].completed = true;
+            global.tutorial_index = 2;
+
+            // Optional: remove water bucket
+            with (obj_inventory) {
+                ds_list_delete(items, ds_list_find_index(items, obj_water_bucket));
+				show_debug_message("deleted water bucket")
+            }
+        } else {
+            // Feedback
+            show_message("You need water first!");
+        }
+    }
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
 }
 } 
 }

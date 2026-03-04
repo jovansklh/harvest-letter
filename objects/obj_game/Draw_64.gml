@@ -68,11 +68,19 @@ if(show_todolist == true){	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite
 		/// @DnDVersion : 1
 		/// @DnDHash : 31C7056A
 		/// @DnDParent : 3BBBE753
+<<<<<<< HEAD
 		/// @DnDArgument : "x" "720"
 		/// @DnDArgument : "y" "300 + (i * 60)"
 		/// @DnDArgument : "caption" """"
 		/// @DnDArgument : "var" "assigned_tasks[i] "
 		draw_text(720, 300 + (i * 60), string("") + string(assigned_tasks[i] ));
+=======
+		/// @DnDArgument : "x" "820"
+		/// @DnDArgument : "y" "300 + (i * 60)"
+		/// @DnDArgument : "caption" """"
+		/// @DnDArgument : "var" "assigned_tasks[i] "
+		draw_text(820, 300 + (i * 60), string("") + string(assigned_tasks[i] ));
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
 	
 		/// @DnDAction : YoYo Games.Drawing.Set_Color
 		/// @DnDVersion : 1

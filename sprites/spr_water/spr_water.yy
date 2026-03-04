@@ -2,16 +2,24 @@
   "$GMSprite":"v2",
   "%Name":"spr_water",
   "bboxMode":0,
+<<<<<<< HEAD
   "bbox_bottom":121,
   "bbox_left":44,
   "bbox_right":180,
   "bbox_top":18,
+=======
+  "bbox_bottom":99,
+  "bbox_left":5,
+  "bbox_right":85,
+  "bbox_top":14,
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
+<<<<<<< HEAD
     {"$GMSpriteFrame":"v1","%Name":"0118bdf1-95f3-4bdb-9ecf-57e2b02e0987","name":"0118bdf1-95f3-4bdb-9ecf-57e2b02e0987","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
@@ -24,6 +32,20 @@
   "name":"spr_water",
   "nineSlice":null,
   "origin":0,
+=======
+    {"$GMSpriteFrame":"v1","%Name":"8117279f-71ca-4bf9-bca5-73ef1f952f0d","name":"8117279f-71ca-4bf9-bca5-73ef1f952f0d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+  ],
+  "gridX":0,
+  "gridY":0,
+  "height":103,
+  "HTile":false,
+  "layers":[
+    {"$GMImageLayer":"","%Name":"1fe8ab03-dab5-4994-96d0-51cff4e8a75d","blendMode":0,"displayName":"default","isLocked":false,"name":"1fe8ab03-dab5-4994-96d0-51cff4e8a75d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+  ],
+  "name":"spr_water",
+  "nineSlice":null,
+  "origin":4,
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",
@@ -69,14 +91,24 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+<<<<<<< HEAD
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0118bdf1-95f3-4bdb-9ecf-57e2b02e0987","path":"sprites/spr_water/spr_water.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"5598c082-51c9-42d5-85aa-c51ddc5eccc1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+=======
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8117279f-71ca-4bf9-bca5-73ef1f952f0d","path":"sprites/spr_water/spr_water.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"b4c6d57f-5d9d-4746-a5e6-b0c1e24fb85f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
+<<<<<<< HEAD
     "xorigin":0,
     "yorigin":0,
+=======
+    "xorigin":45,
+    "yorigin":51,
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -86,5 +118,9 @@
   },
   "type":0,
   "VTile":false,
+<<<<<<< HEAD
   "width":200,
+=======
+  "width":90,
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
 }

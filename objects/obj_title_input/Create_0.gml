@@ -4,7 +4,11 @@ menu_items = [
         text: "NEW GAME",
         x: 1300,
         y: 550,
+<<<<<<< HEAD
         action: function() { room_goto(game); }
+=======
+        action: function() { room_goto(game_tutor); }
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
     },
     {
         text: "LOAD SAVE",

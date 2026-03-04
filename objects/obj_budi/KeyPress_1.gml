@@ -3,6 +3,7 @@
 /// @DnDHash : 66CB76D0
 /// @DnDArgument : "key" "vk_backspace"
 /// @DnDArgument : "not" "1"
+<<<<<<< HEAD
 var l66CB76D0_0;l66CB76D0_0 = keyboard_check_pressed(vk_backspace);if (!l66CB76D0_0){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 6A33094C
@@ -11,6 +12,40 @@ var l66CB76D0_0;l66CB76D0_0 = keyboard_check_pressed(vk_backspace);if (!l66CB7
 	/// @DnDArgument : "expr_relative" "1"
 	/// @DnDArgument : "var" "typedWord "
 	typedWord  += string_trim(keyboard_lastchar);}
+=======
+var l66CB76D0_0;l66CB76D0_0 = keyboard_check_pressed(vk_backspace);if (!l66CB76D0_0){	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Pressed
+	/// @DnDVersion : 1
+	/// @DnDHash : 0C670961
+	/// @DnDParent : 66CB76D0
+	/// @DnDArgument : "key" "vk_left"
+	/// @DnDArgument : "not" "1"
+	var l0C670961_0;l0C670961_0 = keyboard_check_pressed(vk_left);if (!l0C670961_0){	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Pressed
+		/// @DnDVersion : 1
+		/// @DnDHash : 57965439
+		/// @DnDParent : 0C670961
+		/// @DnDArgument : "key" "vk_up"
+		/// @DnDArgument : "not" "1"
+		var l57965439_0;l57965439_0 = keyboard_check_pressed(vk_up);if (!l57965439_0){	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Pressed
+			/// @DnDVersion : 1
+			/// @DnDHash : 15FBE092
+			/// @DnDParent : 57965439
+			/// @DnDArgument : "key" "vk_right"
+			/// @DnDArgument : "not" "1"
+			var l15FBE092_0;l15FBE092_0 = keyboard_check_pressed(vk_right);if (!l15FBE092_0){	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Pressed
+				/// @DnDVersion : 1
+				/// @DnDHash : 2C1FC3AC
+				/// @DnDParent : 15FBE092
+				/// @DnDArgument : "key" "vk_down"
+				/// @DnDArgument : "not" "1"
+				var l2C1FC3AC_0;l2C1FC3AC_0 = keyboard_check_pressed(vk_down);if (!l2C1FC3AC_0){	/// @DnDAction : YoYo Games.Common.Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 6A33094C
+					/// @DnDParent : 2C1FC3AC
+					/// @DnDArgument : "expr" "string_trim(keyboard_lastchar)"
+					/// @DnDArgument : "expr_relative" "1"
+					/// @DnDArgument : "var" "typedWord "
+					typedWord  += string_trim(keyboard_lastchar);}}}}}
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
 
 /// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
 /// @DnDVersion : 1
