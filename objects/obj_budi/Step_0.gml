@@ -1,3 +1,49 @@
+<<<<<<< HEAD
+depth = -y; //Sprite Layering
+
+if (!variable_instance_exists(id, "face")) {
+    face = 0; 
+}
+// Safety check (dari kode baru)
+if (!variable_instance_exists(id, "spd")) {
+    spd = 1; 
+}
+
+//SHOP
+// Cek Jarak ke Truk
+if (instance_exists(obj_truck)) {
+    var _dist = point_distance(x, y, obj_truck.x, obj_truck.y);
+    
+    if (_dist < 80) {
+        nearby_shop = true;
+    } else {
+        nearby_shop = false;
+        if (keyboard_string == "shop") keyboard_string = ""; 
+    }
+}
+
+if (nearby_shop && !global.popup_open) {
+    var _txt = string_copy(keyboard_string, string_length(keyboard_string)-3, 4);
+    
+    if (string_lower(_txt) == "shop") {
+        global.popup_open = true; // Status Game: Freeze
+        keyboard_string = "";     // Reset Keyboard
+        instance_create_depth(0, 0, -9999, obj_shop_ui); // Munculkan UI Toko
+    }
+}
+
+// POPUP FREEZE
+if (global.popup_open) {
+    // Matikan movement physics
+    hspeed = 0;
+    vspeed = 0;
+    speed = 0;
+    // Note: spd tidak di-nol-kan agar tidak bug saat unfreeze
+
+    image_speed = 0;
+    
+    // Set frame diam sesuai arah wajah
+=======
 depth = -y;
 if (!variable_instance_exists(id, "face")) {
     face = 0; 
@@ -16,6 +62,7 @@ if (global.popup_open) {
     spd = 0;
 
     image_speed = 0;
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
     if (face == 0) image_index = 0;
     if (face == 1) image_index = 11;
     if (face == 2) image_index = 7;
@@ -24,6 +71,14 @@ if (global.popup_open) {
     exit; // stop the rest of Step
 }
 
+<<<<<<< HEAD
+// BAGIAN 3: MOVEMENT & SPRITE ANIMATION
+
+var _hspd = 0;
+var _vspd = 0;
+
+=======
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
 // --- MOVEMENT ---
 var _kanan = keyboard_check(vk_right);
 var _kiri  = keyboard_check(vk_left);
@@ -69,4 +124,8 @@ if (_hspd != 0 || _vspd != 0) {
     if (face == 1) image_index = 11; // Stop hadap Atas (Frame 10)
     if (face == 2) image_index = 7;  // Stop hadap Kanan (Frame 7)
     if (face == 3) image_index = 3;  // Stop hadap Kiri (Frame 4)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf

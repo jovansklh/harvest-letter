@@ -23,7 +23,11 @@
   ],
   "name":"spr_nextday",
   "nineSlice":null,
+<<<<<<< HEAD
+  "origin":0,
+=======
   "origin":4,
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",
@@ -75,8 +79,13 @@
     ],
     "visibleRange":null,
     "volume":1.0,
+<<<<<<< HEAD
+    "xorigin":0,
+    "yorigin":0,
+=======
     "xorigin":74,
     "yorigin":23,
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
   },
   "swatchColours":null,
   "swfPrecision":0.5,

@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+if(obj_budi.typedWord == word && image_index == 2 && instance_place(x, y, obj_budi)){
+	 
+    // Add 1 carrot to inventory
+    global.carrot += 1;
+
+    // Reset the crop to "not grown"
+    image_index = 0;
+=======
 if(obj_budi.typedWord == word && instance_place(x, y, obj_budi)){
 	if(stage == 1 && !inventory_has(obj_water_bucket)){
 		show_message("You need water")
@@ -18,4 +27,5 @@ if(obj_budi.typedWord == word && instance_place(x, y, obj_budi)){
 	if(stage >= 2){
 		is_watered = true
 	}
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
 }

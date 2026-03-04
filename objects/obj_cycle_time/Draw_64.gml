@@ -24,8 +24,13 @@ var l775C366F_0 = false;l775C366F_0 = instance_exists(obj_popup_sleep);if(!l77
 	
 	// 4. Tentukan Posisi
 	var _margin = 15; // Margin 10 piksel dari sisi kanan
+<<<<<<< HEAD
 	var _x_pos = display_get_gui_width() - _margin; // X di kanan
 	
+=======
+	var _x_pos = display_get_gui_width() - _margin; // X di kanan
+	
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
 	var _y_pos_hari = 10; // Y untuk hari
 	var _y_pos_waktu = 60; // Y untuk waktu (di bawah hari)=
 	

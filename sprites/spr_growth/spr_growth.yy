@@ -1,11 +1,19 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_growth",
+<<<<<<< HEAD
+  "bboxMode":0,
+  "bbox_bottom":303,
+  "bbox_left":37,
+  "bbox_right":266,
+  "bbox_top":30,
+=======
   "bboxMode":2,
   "bbox_bottom":273,
   "bbox_left":58,
   "bbox_right":238,
   "bbox_top":77,
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -25,7 +33,11 @@
   ],
   "name":"spr_growth",
   "nineSlice":null,
+<<<<<<< HEAD
+  "origin":0,
+=======
   "origin":4,
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",
@@ -83,8 +95,13 @@
     ],
     "visibleRange":null,
     "volume":1.0,
+<<<<<<< HEAD
+    "xorigin":0,
+    "yorigin":0,
+=======
     "xorigin":150,
     "yorigin":161,
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
   },
   "swatchColours":null,
   "swfPrecision":0.5,

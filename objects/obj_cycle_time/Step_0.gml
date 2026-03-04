@@ -7,7 +7,11 @@ if(global.jam_sekarang >= 18 || global.jam_sekarang < 6){	/// @DnDAction : YoY
 	/// @DnDHash : 55B18D34
 	/// @DnDParent : 78E03269
 	/// @DnDArgument : "code" "layer_set_visible("Background", false); $(13_10)layer_set_visible("Backgrounds", true);"
+<<<<<<< HEAD
 	layer_set_visible("Background", false); 
+=======
+	layer_set_visible("Background", false); 
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
 	layer_set_visible("Backgrounds", true);}
 
 /// @DnDAction : YoYo Games.Common.Else

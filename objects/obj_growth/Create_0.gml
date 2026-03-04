@@ -7,6 +7,14 @@ image_speed = 0;
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 5077ADAE
+<<<<<<< HEAD
+/// @DnDInput : 2
+/// @DnDArgument : "expr_1" ""collect""
+/// @DnDArgument : "var" "inventory"
+/// @DnDArgument : "var_1" "word"
+inventory = 0;
+word = "collect";
+=======
 /// @DnDInput : 7
 /// @DnDArgument : "expr_1" ""plant""
 /// @DnDArgument : "expr_2" "false"
@@ -36,3 +44,4 @@ task = global.tutor_tasks[task_index];
 /// @DnDArgument : "function" "array_push"
 /// @DnDArgument : "arg" "obj_game.assigned_tasks, task"
 var push_index = array_push(obj_game.assigned_tasks, task);
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
