@@ -40,11 +40,14 @@ global.words = [
   "yield"
 ]
 
+<<<<<<< HEAD
+=======
 global.tutor_words = [
 	"Plant",
 	"Water"
 ]
 
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
 global.tasks = [
  "Plant blueberries",
     "Water the tomatoes",
@@ -87,6 +90,8 @@ global.tasks = [
     "Feed fish in the pond"
 ]
 
+<<<<<<< HEAD
+=======
 global.tutor_tasks = [
 	"Plant the seeds",
 	"Water the plants"
@@ -94,6 +99,7 @@ global.tutor_tasks = [
 
 global.tutorial_index = 0; // current tutorial step
 
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
 assigned_tasks = []
 completed_tasks = []
 
@@ -106,8 +112,18 @@ show_tutorial_type = false
 
 show_todolist = false;
 
+<<<<<<< HEAD
+global.coins = 1000;
+=======
 global.coins = 0;
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
 global.carrot = 0;
 global.carrotseed = 0;
 global.popup_open = false;
 global.trigger_time = irandom_range(14 * 60, 16 * 60); 
+<<<<<<< HEAD
+
+//Drag Slot in Shop
+global.inv_player = array_create(5, -1);
+=======
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf

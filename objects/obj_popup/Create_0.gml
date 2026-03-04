@@ -59,6 +59,10 @@ repeat(jumlah_soal) {
 index_sekarang = 0;
 
 obj_budi.typedWord = ""
+<<<<<<< HEAD
+global.popup_open = true;
+=======
 global.popup_open = true;
 
 obj_cycle_time.alarm[0] = -1
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf

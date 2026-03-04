@@ -21,7 +21,11 @@ if (global.jam_sekarang >= 18 || global.jam_sekarang <= 5)
     
     // Munculkan TOMBOL CENTANG (relatif dari posisi popup)
     // Angka +80 dan +150 ini jarak tombol dari tengah popup. Ubah kalau kurang pas.
+<<<<<<< HEAD
+    instance_create_layer(cx + 80, cy + 150, "Instances", obj_nextday);
+=======
     instance_create_layer(cx + 10, cy + 240, "Instances", obj_nextday);
+>>>>>>> 6679e719d36d905fbd694b52ed70be941673bbaf
 
     // --- 4. Matikan Timer ---
     obj_cycle_time.alarm[0] = -1;

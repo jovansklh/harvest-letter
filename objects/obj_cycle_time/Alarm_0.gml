@@ -86,6 +86,22 @@ if((global.jam_sekarang == 5 ) && (global.menit_sekarang == 0))
 }
 }
 
+if((global.jam_sekarang == 5 ) && (global.menit_sekarang == 0))
+{
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 416F5716
+	/// @DnDParent : 74AE1E63
+	/// @DnDArgument : "expr" "+1"
+	/// @DnDArgument : "expr_relative" "1"
+	/// @DnDArgument : "var" "obj_growth.image_index"
+	obj_growth.image_index += +1;
+}
+
+/// @DnDAction : YoYo Games.Common.Execute_Code
+/// @DnDVersion : 1
+/// @DnDHash : 612AA26D
+/// @DnDArgument : "code" "// Event: obj_cycle_time -> Alarm 0 (Execute Code)$(13_10)$(13_10)// Menggunakan variabel global yang sudah ada untuk mendapatkan nilainya.$(13_10)var _jam_12_val = _jam_12; $(13_10)var _menit_val = global.menit_sekarang;$(13_10)var _sufiks_val = _sufiks;$(13_10)$(13_10)// 1. Logic Penanganan Jam 12:00 AM/PM$(13_10)if (_jam_12_val == 0) {$(13_10)    _jam_12_val = 12;$(13_10)}$(13_10)$(13_10)// 2. KUNCI FORMATTING 2 DIGIT:$(13_10)// Hasilkan string final dengan string_format() untuk jam dan menit.$(13_10)$(13_10)global.waktu_display = string_format(_jam_12_val, 2, 0) + ":" + (_menit_val == 0 ? string_format(0, 0, 0) : "") + string_format(_menit_val, 0, 0) + " " + _sufiks_val;$(13_10)$(13_10)// 3. Tetapkan variabel hari$(13_10)global.hari_display = "Hari " + string(global.hari);$(13_10)"
 // Event: obj_cycle_time -> Alarm 0 (Execute Code)
 
 // Menggunakan variabel global yang sudah ada untuk mendapatkan nilainya.
@@ -111,4 +127,8 @@ l79D4C6BF_0 = instance_exists(obj_popup_qte);
 if(!l79D4C6BF_0)
 {
 	alarm_set(0, (room_speed * 1.4) + alarm_get(0));
+}
+	/// @DnDArgument : "steps" "room_speed * 0.2"
+	/// @DnDArgument : "steps_relative" "1"
+	alarm_set(0, room_speed * 0.2 + alarm_get(0));
 }
